@@ -114,6 +114,8 @@ const onLogoClick = () => {
   transition: width 0.24s cubic-bezier(0.4, 0, 0.2, 1);
   gap: 1.5rem;
   background: linear-gradient(174deg, $background-6 0.37%, $background-7 99.13%);
+  margin: 0.75rem;
+  margin-right: 0;
 
   .app-sidebar-header {
     position: relative;

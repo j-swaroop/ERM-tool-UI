@@ -39,7 +39,7 @@ init();
   display: flex;
   height: 100%;
   width: 100%;
-  padding: 0.75rem;
+  // padding: 0.75rem;
   background: $background-1;
   box-sizing: border-box;
 

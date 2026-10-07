@@ -1,8 +1,14 @@
-<script setup></script>
+<script setup>
+import RiskEvaluationHeader from '@/components/riskEvaluation/RiskEvaluationHeader.vue';
+import RiskEvaluationToolbar from '@/components/riskEvaluation/RiskEvaluationToolbar.vue';
+import RiskEvaluationList from '@/components/riskEvaluation/RiskEvaluationList.vue';
+</script>
 
 <template>
   <div class="risk-evaluation-page-wrapper">
-    <h1 class="risk-evaluation-heading">{{ $t('appSidebar.riskEvaluation') }}</h1>
+    <RiskEvaluationHeader />
+    <RiskEvaluationToolbar />
+    <RiskEvaluationList />
   </div>
 </template>
 
@@ -10,5 +16,9 @@
 .risk-evaluation-page-wrapper {
   height: 100%;
   width: 100%;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 </style>

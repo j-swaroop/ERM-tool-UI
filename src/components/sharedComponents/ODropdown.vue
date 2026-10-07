@@ -68,6 +68,10 @@ const props = defineProps({
     type: [String, Number],
     default: null,
   },
+  variant: {
+    type: String,
+    default: '',
+  },
 });
 
 const emit = defineEmits(['update:modelValue', 'item:select', 'item:unselect', 'menu:open', 'menu:close']);
@@ -76,6 +80,8 @@ const menuRef = ref(null);
 const buttonRef = ref(null);
 const isMenuOpen = ref(false);
 const menuWidth = ref('auto');
+const variantClass = computed(() => (props.variant ? `dropdown-${props.variant}` : ''));
+const menuContentClass = computed(() => (props.variant ? [`dropdown-${props.variant}`] : []));
 
 // Computed dropdown width
 const dropdownWidth = computed(() => {
@@ -278,7 +284,7 @@ defineExpose({
 </script>
 
 <template>
-  <div class="dropdown-container">
+  <div class="dropdown-container" :class="variantClass">
     <OMenu
       ref="menuRef"
       :trigger-type="triggerType"
@@ -288,6 +294,7 @@ defineExpose({
       :close-on-esc="closeOnEsc"
       :disabled="disabled"
       :width="dropdownWidth"
+      :menu-content-class="menuContentClass"
       @open="handleMenuOpen"
       @close="handleMenuClose"
     >
@@ -376,7 +383,7 @@ defineExpose({
                         <path
                           d="M20 6L9 17L4 12"
                           stroke="currentColor"
-                          stroke-width="2"
+                          stroke-width="2.5"
                           stroke-linecap="round"
                           stroke-linejoin="round"
                         />
@@ -400,7 +407,7 @@ defineExpose({
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .dropdown-container {
   position: relative;
   width: 100%;
@@ -463,6 +470,46 @@ defineExpose({
 
 .dropdown-icon.rotated {
   transform: rotate(180deg);
+}
+
+.dropdown-container.dropdown-filter {
+  width: auto;
+
+  .dropdown-button {
+    display: inline-flex;
+    width: auto;
+    min-height: 0;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.75rem 0.875rem;
+    border-radius: 0.75rem;
+    border: 0.0625rem solid transparent;
+    background: $background-white;
+    color: $color-9;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 0.875rem;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &:hover:not(:disabled):not(.is-open) {
+      border-color: $border-7;
+    }
+
+    &:focus,
+    &.is-open {
+      outline: none;
+      border-color: $border-6;
+      box-shadow: 0 0 0 0.25rem $background-5;
+    }
+  }
+
+  .dropdown-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    color: $color-9;
+  }
 }
 
 .dropdown-content {
