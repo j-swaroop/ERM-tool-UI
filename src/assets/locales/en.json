@@ -1,0 +1,18 @@
+{
+  "homeText": "This is your home page",
+  "appSidebar": {
+    "orgMark": "VZ",
+    "orgName": "Vedanta Zinc International",
+    "gridLabel": "Open apps",
+    "controlCenter": "Control Center",
+    "overview": "Overview",
+    "riskAssessment": "Risk Assessment",
+    "riskEvaluation": "Risk Evaluation",
+    "monitoring": "Monitoring",
+    "notification": "Notification",
+    "kris": "KRIs",
+    "audit": "Audit",
+    "userName": "Ankit Thakur",
+    "userRole": "Risk Controller"
+  }
+}

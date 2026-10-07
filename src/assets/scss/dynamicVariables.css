@@ -1,0 +1,69 @@
+/*Before adding any color please have a look at this google doc https://docs.google.com/document/d/1ZcWW2L234tJRJ_-NqhopNy9hTxXApBoLkCWiCG1dWOg/edit?usp=sharing */
+
+:root {
+  /* Fonts */
+  --unbounded-font: 'Unbounded', sans-serif;
+  --primary-font: 'Poppins', 'Inter', sans-serif;
+  --secondary-font: 'Nunito';
+
+  /* Colors */
+  --color-primary: #000000;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-1: #111827;
+  --color-2: #111827cc;
+  --color-3: #111827b3;
+  --color-4: #11182780;
+  --color-5: #374151;
+  --color-6: #6b7280;
+  --color-7: #747474;
+  --color-8: #636363;
+  --color-9: #505050;
+  --color-10: #de3a17;
+  --color-11: #ffad29;
+  --color-12: #00946f;
+  --color-13: #1782bf;
+  --color-14: #81b637;
+  --color-15: #0ea5e9;
+  --color-16: #f97316;
+  --color-17: #ef4444;
+  --color-18: #b91c1c;
+  --color-19: #2f6b60;
+  --color-20: #ffffffcc;
+  --color-21: #5b6b77;
+
+  /* Border, outline, stroke Colors */
+  --border-white: #ffffff;
+  --border-black: #000000;
+  --border-1: #11182714;
+  --border-2: #f3f4f6;
+  --border-3: #e5e7eb;
+  --border-4: #6b72800d;
+  --border-5: #d4d8de;
+  --border-6: #316d5e;
+
+  /* Background, fill Colors */
+  --background-white: #ffffff;
+  --background-black: #000000;
+  --background-1: #f2f2f2;
+  --background-2: #fafafa;
+  --background-3: #316d5e;
+  --background-4: #d9d9d9;
+  --background-5: #d3eae4;
+  --background-6: #326f5f;
+  --background-7: #1e4741;
+  --background-8: #e08dac;
+  --background-9: #111827;
+  --background-10: #de3a17;
+  --background-11: #ffad29;
+  --background-12: #00946f;
+  --background-13: #11182714;
+  --background-14: #de3a1714;
+  --background-15: #ffad2914;
+  --background-16: #00946f14;
+  --background-17: #1782bf14;
+  --background-18: #81b63714;
+  --background-19: #ffffff33;
+  --background-20: #ffffff12;
+  --background-21: #f4f7fa;
+}
