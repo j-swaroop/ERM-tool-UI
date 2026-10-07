@@ -32,6 +32,7 @@
   --color-20: #ffffffcc;
   --color-21: #5b6b77;
   --color-22: #474747;
+  --color-23: #b08207;
 
   /* Border, outline, stroke Colors */
   --border-white: #ffffff;
@@ -69,4 +70,5 @@
   --background-20: #ffffff12;
   --background-21: #f4f7fa;
   --background-22: #28574c;
+  --background-23: #e7f4f0;
 }

@@ -141,9 +141,26 @@ export function useCommonUtilities() {
       });
   }
 
+  function getInitials(name) {
+    if (!name) return '';
+
+    const titles = ['mr', 'mrs', 'ms', 'dr'];
+    const parts = String(name)
+      .trim()
+      .split(/\s+/)
+      .map((part) => part.replace(/\./g, ''))
+      .filter((part) => part && !titles.includes(part.toLowerCase()));
+
+    if (!parts.length) return '';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+
+    return `${parts[0].charAt(0)}${parts[parts.length - 1].charAt(0)}`.toUpperCase();
+  }
+
   return {
     mimeToExtension,
     capitalizeFirstLetter,
+    getInitials,
     copyToClipboard,
     uploadImageUsingSignedUrl,
     convertObjectUrlsToFiles,

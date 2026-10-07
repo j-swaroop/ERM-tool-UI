@@ -33,6 +33,9 @@ coverage
 *.sln
 *.sw?
 package-lock.json
+
+# Local ERM flow docs
+src/docs-erm-flows/
 # cursor-framework: sensitive config files (auto-added — do not remove)
 .cursor/review-config.json
 .cursor/obsidian-config.json
